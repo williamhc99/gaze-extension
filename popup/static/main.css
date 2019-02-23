@@ -65,6 +65,10 @@ ul#center-date #logo6{
 }
 
 
+.footer{
+	display: flex;
+}
+
 #footer-time {
 	line-height: 1;
 	color: #FFF;
@@ -82,4 +86,59 @@ ul#center-date #logo6{
 #date {
 	margin-left: 2px;
 	font-size: 2.5vw;
+}
+
+
+#todo {
+	float: right
+	width: 100%;
+	color: #fff;
+	box-sizing: border-box;
+	text-align: center;
+	margin-left: 50%;
+}
+
+#todo ul {
+	margin-bottom: 10px;
+	padding: 0;
+	list-style: none;
+}
+
+#todo ul li {
+	cursor: pointer;
+	position: relative;
+	padding:12px 8px 12px 40px;
+	background: rgba(200,200,200,0.7);
+	font-size: 20px;
+	transition: 0.2s;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#todo ul li:nth-child(odd){
+	background: rgba(170,170,170,0.7);
+}
+
+#todo ul li:hover{
+	background: rgb(220,220,220);
+}
+
+#todo ul li.checked {
+	text-decoration: line-through;
+}
+
+#todo ul li.checked::before {
+	content: '';
+	position: absolute;
+	border-color: #fff;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+	top: 10px;
+	left: 16px;
+	transform: rotate(45deg);
+	height: 15px;
+	widows: 7px;
 }
