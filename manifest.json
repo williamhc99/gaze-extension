@@ -1,0 +1,16 @@
+{
+    "name": "Yeet",
+    "version": "1.0",
+    "description": "Yeet brother yeet",
+    "manifest_version": 2,
+
+    "browser_action": {
+        "default_popup": "flappy/index.html"
+    },
+
+    "chrome_url_overrides": {
+    	"newtab": "popup/index.html"
+    },
+
+    "permissions": ["activeTab"]
+}
