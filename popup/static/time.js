@@ -12,9 +12,12 @@ function checkDay(h){
 	return true;
 }
 
+var d = new Date();
+var id = d.getDay();
+
 function showTime(){
 	document.getElementById("time").innerHTML="";
-	var d = new Date();
+	d = new Date();
 	var h = d.getHours();
 	var m = d.getMinutes();
 	// var s = d.getSeconds();
@@ -34,18 +37,23 @@ function showTime(){
 	document.getElementById("time").innerHTML=h+" : "+m+" "+ap;
 	setTimeout(showTime, 1000);
 }
+
+function draw(){
+	document.getElementById("logo"+id).style.borderColor = "rgb(249, 255, 81)";
+	document.getElementById("logo"+id).style.borderWidth = "4px";
+	document.getElementById("logo"+id).style.boxShadow = "0 0 30px rgb(249, 255, 81)";
+}
+
 function showDate(){
-	var d = new Date();
+	d = new Date();
 	var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 	var id = d.getDay();
 
 	document.getElementById("date").innerHTML = days[id]+", "+months[d.getMonth()]+" "+d.getDate();
-	document.getElementById("logo"+id).style.borderColor = "rgb(249, 255, 81)";
-	document.getElementById("logo"+id).style.borderWidth = "4px";
-	document.getElementById("logo"+id).style.boxShadow = "0 0 30px rgb(249, 255, 81)";
 	setTimeout(showDate, 60000);
 }
 
 showTime();
 showDate();
+setTimeout(draw, 600);
