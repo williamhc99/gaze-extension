@@ -1,7 +1,7 @@
 {
-    "name": "Yeet",
+    "name": "Gaze",
     "version": "1.0",
-    "description": "Yeet brother yeet",
+    "description": "Gaze Extension",
     "manifest_version": 2,
 
     "browser_action": {
