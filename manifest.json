@@ -12,5 +12,11 @@
     	"newtab": "popup/index.html"
     },
 
-    "permissions": ["activeTab"]
+    "permissions": ["activeTab"],
+
+    "icons": {
+        "64" : "logo64.png",
+        "128" : "logo128.png",
+        "256" : "logo256.png"
+    }
 }
