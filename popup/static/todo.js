@@ -97,6 +97,41 @@ function autocomplete(input, arr) {
 
 autocomplete(document.getElementById("goal"), countries);
 
+// TODO LIST FUNCTIONS 
+var numTodoItems = 0;
+var data = JSON.parse(localStorage.getItem("todo")) || [];
+
+
+function getTodo(){
+  if (data.length > 0){
+    for (i in data){
+      var goal = data[i];
+      numTodoItems++;
+      var items = document.getElementById("items");
+      var li = document.createElement("li");
+      // add goal to li, and li to todolist
+      li.appendChild(document.createTextNode(goal));
+      items.appendChild(li);
+  
+      document.getElementById("goal").value = "";
+  
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+      
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+  }
+}
+
+getTodo(); // get todo list item from local storage
 
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
@@ -116,6 +151,8 @@ for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
+    data = data.splice(i, 1);
+    localStorage.setItem("todo", JSON.stringify(data));
   }
 }
 
@@ -146,5 +183,7 @@ document.body.onkeydown = function(key) {
         div.style.display = "none";
       }
     }
+    data.push(goal);
+    localStorage.setItem("todo", JSON.stringify(data));
   }
 };
