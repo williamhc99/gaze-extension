@@ -51,7 +51,7 @@ function showDate(){
 	var id = d.getDay();
 
 	document.getElementById("date").innerHTML = days[id]+", "+months[d.getMonth()]+" "+d.getDate();
-	setTimeout(showDate, 60000);
+	setTimeout(showDate, 1000);
 }
 
 showTime();

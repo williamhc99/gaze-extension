@@ -65,22 +65,26 @@ ul#center-date #logo6{
 }
 
 
+
 .footer{
+	/*IMPORTANT for clock with todo*/
 	display: flex;
+	flex-wrap: nowrap;
+	margin-top: 8%;
 }
 
 #footer-time {
 	line-height: 1;
 	color: #FFF;
-
+	
 	text-align: left;
 	vertical-align: bottom;
 	margin-left: 3%;
-	margin-top: 10%;
 }
 
 #time {
 	font-size: 6vw;
+	width: 400px;
 }
 
 #date {
@@ -89,13 +93,20 @@ ul#center-date #logo6{
 }
 
 
+
+
 #todo {
-	float: right
+	float: right;
 	width: 100%;
 	color: #fff;
 	box-sizing: border-box;
+	padding: 2px;
+	background: rgba(240,240,240,0.5);
 	text-align: center;
-	margin-left: 50%;
+	margin-left: 30%;
+	margin-right: 20px;
+	font-size: 10px;
+	border-radius: 10px;
 }
 
 #todo ul {
@@ -107,9 +118,8 @@ ul#center-date #logo6{
 #todo ul li {
 	cursor: pointer;
 	position: relative;
-	padding:12px 8px 12px 40px;
-	background: rgba(200,200,200,0.7);
-	font-size: 20px;
+	padding:10px 10px 10px 10px;
+	background: rgba(200,200,200,0.8);
 	transition: 0.2s;
 
 	-webkit-user-select: none;
@@ -119,7 +129,7 @@ ul#center-date #logo6{
 }
 
 #todo ul li:nth-child(odd){
-	background: rgba(170,170,170,0.7);
+	background: rgba(170,170,170,0.8);
 }
 
 #todo ul li:hover{
