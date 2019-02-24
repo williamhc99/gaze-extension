@@ -85,29 +85,23 @@ function autocomplete(input, arr) {
     var x = document.getElementsByClassName("autocomplete-items");
     for (var i = 0; i < x.length; i++) {
       if (elmnt != x[i] && elmnt != input) {
-      x[i].parentNode.removeChild(x[i]);
+        x[i].parentNode.removeChild(x[i]);
+      }
     }
   }
-}
-/*execute a function when someone clicks in the document:*/
-document.addEventListener("click", function (e) {
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
     closeAllLists(e.target);
-});
-
-// document.addEventListener("keypress", function(e) {
-//     closeAllLists(e.target);
-// });
+  });
 }
-
-
 
 autocomplete(document.getElementById("goal"), countries);
 
 /* Handles entering value */
 // get the key pressed
-document.body.onkeyup = function(key) {
+document.body.onkeydown = function(key) {
   // if key pressed is enter
-  if (key.keyCode == 13) {
+  if (key.keyCode == 13 && document.getElementById("goal").value != "") {
     // get goal, items, li variables
     var goal = document.getElementById("goal").value;
     var items = document.getElementById("items");
@@ -116,6 +110,6 @@ document.body.onkeyup = function(key) {
     li.appendChild(document.createTextNode(goal));
     items.appendChild(li);
 
-    document.getElementById("goal").value = " ";
+    document.getElementById("goal").value = "";
   }
 };
