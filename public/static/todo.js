@@ -115,11 +115,7 @@ function getTodo(){
   
       document.getElementById("goal").value = "";
   
-      var span = document.createElement("SPAN");
-      var txt = document.createTextNode("\u00D7");
-      span.className = "close";
-      span.appendChild(txt);
-      li.appendChild(span);
+
       
       for (i = 0; i < close.length; i++) {
         close[i].onclick = function() {
@@ -151,7 +147,9 @@ for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
-    data = data.splice(i, 1);
+    data.splice(i, 1);
+    const textContent = div.textContent.substring(0, div.textContent.length - 1);
+    data.splice(data.indexOf(textContent), 1);
     localStorage.setItem("todo", JSON.stringify(data));
   }
 }
