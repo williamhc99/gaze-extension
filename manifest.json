@@ -9,7 +9,7 @@
     },
 
     "chrome_url_overrides": {
-    	"newtab": "popup/index.html"
+    	"newtab": "public/index.html"
     },
 
     "permissions": ["activeTab"],
