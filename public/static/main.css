@@ -1,27 +1,27 @@
 body {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-
-	margin: 0;
-	padding: 0;
+	max-width: 100%;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	font-family: Quicksand;
+	text-size-adjust:none;
 }
 
 
-#center-info {
+/* #center-info {
 	color: #FFF;
 	margin-top: 17%;
 	text-align: center;
-}
+} */
 
-ul#center-date {
-	/*text-align: center;*/
-	/*padding: 0px;*/
-}
+/* ul#center-date {
+	text-align: center;
+	padding: 0px;
+} */
 
 
-ul#center-date li {
+/* ul#center-date li {
 	font-size: 4vw;
 	list-style: none;
 	display: inline;
@@ -62,37 +62,40 @@ ul#center-date #logo6{
 
 #quote {
 	font-size: 2.5vw;
-}
+} */
 
 
 
 .footer{
-	/*IMPORTANT for clock with todo*/
-	display: flex;
-	flex-wrap: nowrap;
-	margin-top: 8%;
+	/* IMPORTANT for clock with todo */
+	/* display: flex;
+	flex-wrap: nowrap; */
+	left: 5%;
+	bottom: 5%;
+	position: fixed;
+	font-size-adjust: 0.58;
 }
 
 #footer-time {
 	line-height: 1;
 	color: #FFF;
-	
 	text-align: left;
 	vertical-align: bottom;
-	margin-left: 3%;
 }
 
 #time {
-	font-size: 6vw;
-	width: 400px;
+	line-height: 1;
+	color: #FFF;
+	text-align: left;
+	vertical-align: bottom;
+	font-size: 4vw;
 }
 
 #date {
-	margin-left: 2px;
-	font-size: 2.5vw;
+	font-size: 1.5vw;
 }
 
-#todo {
+/* #todo {
 	float: right;
 	width: 100%;
 	color: #fff;
@@ -149,4 +152,4 @@ ul#center-date #logo6{
 	font-family: Quicksand;
 	font-size: 16px;
 }
-  
+   */

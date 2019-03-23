@@ -38,11 +38,11 @@ function showTime(){
 	setTimeout(showTime, 1000);
 }
 
-function draw(){
-	document.getElementById("logo"+id).style.borderColor = "rgb(249, 255, 81)";
-	document.getElementById("logo"+id).style.borderWidth = "4px";
-	document.getElementById("logo"+id).style.boxShadow = "0 0 30px rgb(249, 255, 81)";
-}
+// function draw(){
+// 	document.getElementById("logo"+id).style.borderColor = "rgb(249, 255, 81)";
+// 	document.getElementById("logo"+id).style.borderWidth = "4px";
+// 	document.getElementById("logo"+id).style.boxShadow = "0 0 30px rgb(249, 255, 81)";
+// }
 
 function showDate(){
 	d = new Date();
@@ -56,4 +56,4 @@ function showDate(){
 
 showTime();
 showDate();
-setTimeout(draw, 600);
+// setTimeout(draw, 600);
