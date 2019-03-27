@@ -12,7 +12,7 @@
  function img() {
 	 var n = Math.ceil((Math.random() * 81));
 	var img = new Image()
-	img.src = "https://storage.googleapis.com/makoto_shinkai_wallpaper/pic" + n + ".jpg";
+	img.src = "https://storage.googleapis.com/gaze_pictures_test/pic" + n + ".jpg";
 	return(img.src);
  }
  document.body.style.background = "url(" + img() + ") no-repeat center center fixed";

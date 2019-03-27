@@ -39,11 +39,12 @@ for imageLink in BeautifulSoup(response, "lxml", parse_only=SoupStrainer('a')):
                     height = img.size[1]
                     width = img.size[0]
 
-                    if (3 * height > 4 * width):
+                    if (9 * height > 16 * width):
                         print('landscape gang')
                         os.remove(filename)
                         break
                     if height < 1080 or width < 1920:
+                        print('low res gang')
                         os.remove(filename)
                         break
                     elif height > 2160 and width > 4096:
