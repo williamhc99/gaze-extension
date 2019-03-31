@@ -14,10 +14,11 @@ from google.cloud.vision import types
 
 client = storage.Client()
 bucket = client.get_bucket('gaze_pictures_test')
-basewidth = 2048
+basewidth = 1920
 http = httplib2.Http()
 status, response = http.request('https://apod.nasa.gov/apod/archivepix.html')
 counter = 0
+startIndex = 0
 goodLabels = open('imagelabels.txt').read().splitlines()
 client = vision.ImageAnnotatorClient()
 for imageLink in BeautifulSoup(response, "lxml", parse_only=SoupStrainer('a')):
@@ -39,7 +40,7 @@ for imageLink in BeautifulSoup(response, "lxml", parse_only=SoupStrainer('a')):
                     height = img.size[1]
                     width = img.size[0]
 
-                    if (9 * height > 16 * width):
+                    if (4 * height > 3 * width):
                         print('landscape gang')
                         os.remove(filename)
                         break
@@ -47,13 +48,13 @@ for imageLink in BeautifulSoup(response, "lxml", parse_only=SoupStrainer('a')):
                         print('low res gang')
                         os.remove(filename)
                         break
-                    elif height > 2160 and width > 4096:
+                    elif height > 1080 and width > 1920:
                         wpercent = (basewidth/float(width))
                         hsize = int(float(height)*float(wpercent))
                         img_resized = img.resize((basewidth,hsize), Image.ANTIALIAS)
                         img_resized.save(filename)
                     
-                    if height > 1080 and width > 1920:
+                    if height >= 1080 and width >= 1920:
                         img = Image.open(filename)
                         height = img.size[1]
                         width = img.size[0]                    
