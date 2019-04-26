@@ -37,11 +37,9 @@ for imageLink in BeautifulSoup(response, "lxml", parse_only=SoupStrainer('a')):
                     filename = str(link['href'])[11:]
 
                     img = Image.open(filename)
-                    height = img.size[1]
-                    width = img.size[0]
-
-                    if (4 * height > 3 * width):
-                        print('landscape gang')
+                    width, height = img.size
+                    if (3 * width < 4 * height) or (9 * width > 16 * height):
+                        print('too long/too short gang')
                         os.remove(filename)
                         break
                     if height < 1080 or width < 1920:
@@ -56,8 +54,7 @@ for imageLink in BeautifulSoup(response, "lxml", parse_only=SoupStrainer('a')):
                     
                     if height >= 1080 and width >= 1920:
                         img = Image.open(filename)
-                        height = img.size[1]
-                        width = img.size[0]                    
+                        width, height = img.size                  
 
                     file_name = os.path.join(
                         os.path.dirname(__file__),
@@ -70,15 +67,10 @@ for imageLink in BeautifulSoup(response, "lxml", parse_only=SoupStrainer('a')):
                     response = client.label_detection(image=image)
                     labels = response.label_annotations
 
-                
-                    # print('Labels:')
                     score = 0
                     for label in labels:
                         if (label.description in goodLabels):
                             score+=1
-                        # else: 
-                            # goodLabels.append(label.description)
-                            # print(label.description, file=open("imagelabels.txt", "a"))
                     
                     percentage = score/len(labels)
                     print(percentage)
@@ -92,6 +84,6 @@ for imageLink in BeautifulSoup(response, "lxml", parse_only=SoupStrainer('a')):
 
             except Exception as e:
                 print(e)
-                print('##some weird shit going on w this file')
+                print('### some weird shit going on w this file')
 
 print(goodLabels)
