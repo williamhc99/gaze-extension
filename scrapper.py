@@ -19,7 +19,7 @@ http = httplib2.Http()
 status, response = http.request('https://apod.nasa.gov/apod/archivepix.html')
 counter = 0
 startIndex = 0
-goodLabels = open('imagelabels.txt').read().splitlines()
+goodLabels = open('src/imagelabels.txt').read().splitlines()
 client = vision.ImageAnnotatorClient()
 for imageLink in BeautifulSoup(response, "lxml", parse_only=SoupStrainer('a')):
 # for i in range(9):
