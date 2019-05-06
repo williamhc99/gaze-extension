@@ -1,4 +1,5 @@
 google_auth.json
 .DS_Store
 .firebase/
+.vscode/
 env/
