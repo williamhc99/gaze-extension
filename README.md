@@ -12,8 +12,8 @@ If you want this to your chrome extensions:
 
 Your new tabs should be updated now!
 
-## How it works
+## How the pictures are obtained
+
+The python file scrapper.py will scrape this page: https://apod.nasa.gov/apod/archivepix.html and then filter for cool space pictures and store them
 
 The pictures are stored on a Google Cloud Storage. 
-
-The python file scrapper.py will scrape this page: https://apod.nasa.gov/apod/archivepix.html for cool space pictures!
