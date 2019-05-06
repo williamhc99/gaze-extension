@@ -15,3 +15,4 @@ function img() {
 	return (img.src);
 }
 document.body.style.background = "url(" + img() + ") no-repeat center center fixed";
+document.body.style.backgroundSize = "cover";

@@ -3,3 +3,4 @@ google_auth.json
 .firebase/
 .vscode/
 env/
+google_creds.json

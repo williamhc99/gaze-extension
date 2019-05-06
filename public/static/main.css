@@ -7,8 +7,12 @@ body {
 	font-family: Quicksand;
 	text-size-adjust:none;
 }
-
-
+element.style {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 /* #center-info {
 	color: #FFF;
 	margin-top: 17%;
