@@ -3,6 +3,7 @@
 ## Todo
 
 - [ ] add OpenCV blur detection
+- [ ] add OpenCV line detection
 - [ ] store 'bad' pictures on gcp storage bucket
 - [ ] space picture AI??
 
