@@ -1,18 +1,10 @@
 body {
 	max-width: 100%;
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background: black;
 	font-family: Quicksand;
 	text-size-adjust:none;
 }
-element.style {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
+
 /* #center-info {
 	color: #FFF;
 	margin-top: 17%;
@@ -67,8 +59,6 @@ ul#center-date #logo6{
 #quote {
 	font-size: 2.5vw;
 } */
-
-
 
 .footer{
 	/* IMPORTANT for clock with todo */

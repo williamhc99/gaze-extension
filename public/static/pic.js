@@ -7,12 +7,14 @@ function contains(num, arr) {
 	return false;
 }
 
-
-function img() {
-	var n = Math.ceil((Math.random() * 81));
+function getImage() {
+	document.body.style.backgroundColor = '#000000';
+	var n = Math.ceil((Math.random() * 99));
 	var img = new Image()
 	img.src = "https://storage.googleapis.com/gaze_pictures_test/pic" + n + ".jpg";
-	return (img.src);
+	document.body.style.background = "url(" + img.src + ") no-repeat center center fixed";
+	document.body.style.backgroundSize = "cover";
 }
-document.body.style.background = "url(" + img() + ") no-repeat center center fixed";
-document.body.style.backgroundSize = "cover";
+
+getImage()
+
