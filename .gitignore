@@ -4,3 +4,6 @@ google_auth.json
 .vscode/
 env/
 google_creds.json
+deploy/
+deploy.zip
+store-info/
