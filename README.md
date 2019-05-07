@@ -1,16 +1,10 @@
 # gaze-extension
 
-## To Use
+## Todo
 
-Download ZIP, unzip, and run index.html to see the new tab page
-
-If you want this to your chrome extensions:
-
- - Unzip gaze_extension_master.zip 
- - Go to chrome://extensions/ 
- - Click load unpacked and select gaze-extension-master folder
-
-Your new tabs should be updated now!
+- [ ] add OpenCV blur detection
+- [ ] store 'bad' pictures on gcp storage bucket
+- [ ] space picture AI??
 
 ## How the pictures are obtained
 
