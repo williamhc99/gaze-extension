@@ -3,7 +3,7 @@ import wget
 from PIL import Image
 
 directory = '../data/SpaceWallpaper'
-smallFiles = '../data/SpaceWallpaper/small'
+smallFiles = '../data/small'
 basewidth = 1920
 
 for filename in os.listdir(directory):
@@ -29,4 +29,3 @@ for filename in os.listdir(directory):
         img_resized.save(filepath)
         print('resized')
 
-    
