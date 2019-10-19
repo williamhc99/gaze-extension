@@ -7,3 +7,7 @@ google_creds.json
 deploy/
 deploy.zip
 store-info/
+test.py
+tester.py
+data/
+Houghlines_filtered/
