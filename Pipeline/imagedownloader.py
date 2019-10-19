@@ -1,6 +1,5 @@
 import httplib2
 import requests
-import cv2
 import wget
 import os
 import io
@@ -8,11 +7,7 @@ import urllib.request
 import numpy as np
 from bs4 import BeautifulSoup, SoupStrainer
 from io import BytesIO
-from PIL import Image
 from google.cloud import storage
-from tempfile import TemporaryFile
-from google.cloud import vision
-from google.cloud.vision import types
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'C:/Users/w1l-y/Documents/Starchart/google_creds.json'
 client = storage.Client()
@@ -23,7 +18,6 @@ status, response = http.request('https://apod.nasa.gov/apod/archivepix.html')
 counter = 0
 startIndex = 0
 goodLabels = open('imagelabels.txt').read().splitlines()
-client = vision.ImageAnnotatorClient()
 
 for imageLink in BeautifulSoup(response, "lxml", parse_only=SoupStrainer('a')):
     # for i in range(9):
