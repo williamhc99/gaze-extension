@@ -2,7 +2,7 @@
 
 A personal python project focused around Computer Vision. The aim was to create a library that would be able to scrape Nasa's website for space pictures. These pictures would then go into a pipeline where they will be filtered and resized based on their pixel density and blur detection using OpenCV. These filtered and resized pictures would be fed to a SVM that I trained with a dataset of 600 pictures. The pictures that are deemed worthy 'space themed wallpaper' get stored inside a GCP bucket. 
 
-The chrome extension then pulls a random space wallpaper everytime you open a new tab. 
+The chrome extension https://chrome.google.com/webstore/detail/gaze/hdjjocbdhnjchhepfdioddlooblklboa then pulls a random space wallpaper everytime you open a new tab. 
 
 ## imagedownloader.py
 
