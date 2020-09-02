@@ -6,13 +6,11 @@ The chrome extension https://chrome.google.com/webstore/detail/gaze/hdjjocbdhnjc
 
 ## imagedownloader.py
 
-This python file will scrape this page: https://apod.nasa.gov/apod/archivepix.html and then filter for cool space pictures and store them
-
-The pictures are stored on a Google Cloud Storage. 
+This python file will scrape this page: https://apod.nasa.gov/apod/archivepix.html and then filter for cool space pictures and store them locally before they are fed into imageresizer.py.
 
 ## imageresizer.py
 
-This file will filter and resize all the pictures using simple methods like simple count and more complex methods like applying the Laplacian Matrix to determine the 'blurriness' of the picture
+This file will filter and resize all the pictures using simple methods like simple count and more complex methods like applying the Laplacian Matrix to determine the 'blurriness' of the picture. All pictures that do satisfy these requirements will be removed.
 
 ## imageclassifier.py
 
